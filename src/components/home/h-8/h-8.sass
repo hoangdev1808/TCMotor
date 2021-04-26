@@ -1,0 +1,82 @@
+.special-offers-frame
+	padding: r(97px) 0
+	background: $black-1
+	.section-title
+		padding-bottom: 40px
+	.special-slide
+		max-width: 1200px
+		margin: 0 auto
+		position: relative
+		.swiper-inner
+			.img
+				+img-ratio(550/1200)
+			.wrap-content
+				position: relative
+				padding-top: 26px
+				margin-top: 26px
+				.line
+					position: absolute
+					top: 0
+					left: 0
+					line-height: 0
+					span
+						display: inline-block
+						width: 24px
+						height: 4px
+						background: $white
+						line-height: auto
+						+ span
+							margin-left: 4px
+				.content
+					display: flex
+					.text
+						max-width: 547px
+						.title
+							color: $white
+							font-size: r(24px)
+							font-weight: 500
+							line-height: 24px
+							padding-bottom: 11px
+						.desc
+							p
+								color: $gray-d4
+								font-weight: 500
+								line-height: 24px
+					.button
+						margin-left: 70px
+						margin-top: 20px
+						.btn-booking
+							width: 278px
+							height: 50px
+							border-radius: 25px
+					@media screen and ( max-width: 767.98px )
+						flex-direction: column
+						.button
+							margin-left: 0
+		.swiper-button-next,
+		.swiper-button-prev
+			width: 32px
+			height: 32px
+			border-radius: 16px
+			background: $white-f4
+			&::after
+				color: $black-1
+				font-family: Material Icons
+				font-size: r(18px)
+				font-weight: 400
+				line-height: 30px
+				text-align: center
+			&:focus
+				outline: none
+			@media screen and ( max-width: 767.98px )
+				top: 30%
+		.swiper-button-next
+			right: 23px
+			&::after
+				content: 'chevron_right'
+		.swiper-button-prev
+			left: 23px
+			&::after
+				content: 'chevron_left'
+	@media screen and ( max-width: 767.98px )
+		padding: r(30px) 0

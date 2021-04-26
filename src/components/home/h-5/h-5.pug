@@ -1,0 +1,200 @@
+section#sec-5.section.product-frame 
+	.hero-product 
+		.wrap-slide 
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1; i<5; i++)
+						.swiper-slide
+							.swiper-inner
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/home/i-5.png", alt="")
+			.swiper-button-next 
+			.swiper-button-prev 
+		.wrap-infor-product 
+			.section-title Khám phá New Santa Fe
+			.container--tabs
+				ul.nav-tabs
+					li
+						a(href="#tab-1") SmartStream D2.2 (Dầu)
+					li.active 
+						a(href="#tab-2") SmartStream G2.5 (Xăng)
+				.tab-content
+					#tab-1.tab-panel
+						table
+							tr 
+								td
+									p Kích thước tổng thể 
+									p (DxRxC) (mm)
+								td 
+									p Chiều dài cơ sở
+									p (mm)
+								td 
+									p Khoảng cách gầm xe
+									p (mm)
+							tr 
+								td 4.785x1.900x1.730
+								td 2,765
+								td 185
+						.wrap-filter 
+							.form-row 
+								.form-group 
+									label Chọn phiên bản
+									select 
+										option(value="") Cao cấp 
+										option(value="") Trung bình
+								.form-group 
+									label Số lượng xe
+									select 
+										option(value="") 1 
+										option(value="") 2
+							.form-row
+								.form-group
+									label(for="") Màu sắc
+									ul 
+										-for(i=1; i<7; i++)
+											li
+												a(href="") 
+													img(src="./img/icon/cl-"+i+".png", alt="")
+							.form-row 
+								.form-group 
+									label tỉnh/ Thành phố
+									select 
+										option(value="") Tp Hồ Chí Minh 
+										option(value="") Hà Nội
+								.form-group 
+									label Showroom/ Đại lý
+									select 
+										option(value="") Showroom Hyundai Miền Nam
+										option(value="") Showroom Hyundai Miền Bắc
+							.form-row 
+								.form-group
+									label(for="") Giá dự kiến
+									.price
+										label(for="") Giá chỉ từ
+										.input 1,000,000,000 đ
+									.price
+										label(for="") Giá đặt cọc
+										.input 50,000,000 đ
+						.wrap-form
+							.form-row
+								.form-group
+									label(for="") Họ và tên (*)
+									input(type="text" placeholder="Họ và tên của bạn")
+							.form-row
+								.form-group
+									label(for="") Email (*)
+									input(type="text" placeholder="Địa chỉ email")
+								.form-group
+									label(for="") Số điện thoại
+									input(type="text" placeholder="0123 456 789")
+							.form-row
+								.form-group.qradio 
+									label(for="") Hình thức thanh toán
+									ul.cf
+										li 
+											input(id="visa" type="radio" name="payment" value="visa" checked)
+											label(for="visa") Thẻ Visa, Master Card
+										li 
+											input(id="atm" type="radio" name="payment" value="atm")
+											label(for="atm") Thẻ ATM nội địa
+										li 
+											input(id="banking" type="radio" name="payment" value="banking")
+											label(for="banking") Chuyển khoản ngân hàng
+							.form-row
+								.form-group.agree
+									input(type='checkbox' id='checkbox')
+									label(for='checkbox') Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung Điều khoản trong Thỏa Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi áp dụng tại thời điểm đặt mua xe New SantaFe
+							.form-group.frm-btnwrap
+								.frm-btn
+									input.btn.btn-default.frm-btn-submit(type='submit' name="" value='Đặt hàng ngay')
+
+					#tab-2.tab-panel.active
+						table
+							tr 
+								td
+									p Kích thước tổng thể 
+									p (DxRxC) (mm)
+								td 
+									p Chiều dài cơ sở
+									p (mm)
+								td 
+									p Khoảng cách gầm xe
+									p (mm)
+							tr 
+								td 4.785x1.900x1.730
+								td 2,765
+								td 185
+						.wrap-filter 
+							.form-row 
+								.form-group 
+									label Chọn phiên bản
+									select 
+										option(value="") Cao cấp 
+										option(value="") Trung bình
+								.form-group 
+									label Số lượng xe
+									select 
+										option(value="") 1 
+										option(value="") 2
+							.form-row
+								.form-group
+									label(for="") Màu sắc
+									ul 
+										-for(i=1; i<7; i++)
+											li
+												a(href="") 
+													img(src="./img/icon/cl-"+i+".png", alt="")
+							.form-row 
+								.form-group 
+									label tỉnh/ Thành phố
+									select 
+										option(value="") Tp Hồ Chí Minh 
+										option(value="") Hà Nội
+								.form-group 
+									label Showroom/ Đại lý
+									select 
+										option(value="") Showroom Hyundai Miền Nam
+										option(value="") Showroom Hyundai Miền Bắc
+							.form-row 
+								.form-group
+									label(for="") Giá dự kiến
+									.price
+										label(for="") Giá chỉ từ
+										.input 1,000,000,000 đ
+									.price
+										label(for="") Giá đặt cọc
+										.input 50,000,000 đ
+						.wrap-form
+							.form-row
+								.form-group
+									label(for="") Họ và tên (*)
+									input(type="text" placeholder="Họ và tên của bạn")
+							.form-row
+								.form-group
+									label(for="") Email (*)
+									input(type="text" placeholder="Địa chỉ email")
+								.form-group
+									label(for="") Số điện thoại
+									input(type="text" placeholder="0123 456 789")
+							.form-row
+								.form-group.qradio 
+									label(for="") Hình thức thanh toán
+									ul.cf
+										li 
+											input(id="visa-2" type="radio" name="payment" value="visa" checked)
+											label(for="visa-2") Thẻ Visa, Master Card
+										li 
+											input(id="atm-2" type="radio" name="payment" value="atm")
+											label(for="atm-2") Thẻ ATM nội địa
+										li 
+											input(id="banking-2" type="radio" name="payment" value="banking")
+											label(for="banking-2") Chuyển khoản ngân hàng
+							.form-row
+								.form-group.agree
+									input(type='checkbox' id='checkbox-2')
+									label(for='checkbox-2') Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung Điều khoản trong Thỏa Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi áp dụng tại thời điểm đặt mua xe New SantaFe
+							.form-group.frm-btnwrap
+								.frm-btn
+									input(type='submit' name="" value='Đặt hàng ngay')
+

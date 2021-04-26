@@ -1,0 +1,132 @@
+#home-banner
+	.home-banner
+		position: relative
+		.swiper-inner
+			position: relative
+			width: 100vw
+			height: 100vh
+			background: $blue-03
+			background-image: $gradient
+			.img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				z-index: 2
+			&::after
+				position: absolute
+				top: 50%
+				left: 50%
+				content: url('../img/banner/blur.png')
+				transform: translate(-50%, -50%)
+				z-index: 1
+			.wrap-content
+				position: absolute
+				width: 100%
+				bottom: 100px
+				left: 0
+				z-index: 2
+				display: flex
+				justify-content: center
+				align-items: center
+				ul
+					display: flex
+					align-items: center
+					li
+						padding: 0 27.5px
+						.content
+							.title
+								text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25)
+								color: $white
+								font-size: r(30px)
+								font-weight: 700
+							.sub-title
+								font-size: r(24px)
+								font-weight: 300
+								color: $white
+							p
+								color: $white
+								font-size: r(14px)
+								font-weight: 400
+								text-align: center
+								strong
+									font-size: r(18px)
+									font-weight: 700
+						&:first-child
+							padding-left: 0
+						&:last-child
+							position: relative
+							&::after
+								position: absolute
+								top: 0
+								right: 0
+								width: 1px
+								height: 100%
+								background: $white
+								opacity: 0.25
+								content: ''
+					li + li
+						position: relative
+						&::before
+							position: absolute
+							top: 0
+							left: 0
+							width: 1px
+							height: 100%
+							background: $white
+							opacity: 0.25
+							content: ''
+				.button
+					padding-left: 72px
+					position: relative
+				@media screen and ( max-width: 991.98px )
+					ul
+						li
+							padding: 0 15px
+							.content
+								.title
+									font-size: r(26px)
+								.sub-title
+									font-size: r(20px)
+								p
+									strong
+										font-size: 1rem
+					.button
+						padding-left: 30px
+				@media screen and ( max-width: 767.98px )
+					flex-direction: column
+					ul
+						flex-wrap: wrap
+						flex-direction: row
+						padding: 0 15px
+						li
+							flex: 1 0 50%
+							margin-bottom: 20px
+							.content
+								.title
+									font-size: r(18px)
+								.sub-title
+									font-size: 1rem
+		.swiper-pagination
+			position: absolute
+			bottom: 50px
+			left: 50%
+			transform: translateX(-50%)
+			width: 100% !important
+			.swiper-pagination-bullet
+				width: 10px
+				height: 10px
+				border: 1px solid $gray-e5
+				opacity: 1
+				&-active
+					border: 2px solid $white
+					background: $blue-00
+				&:focus
+					outline: none
+				+ .swiper-pagination-bullet
+					margin-left: 10px
+			@media screen and ( max-width: 991.98px )
+				left: 50%
+				top: auto
+				transform: translateX(-50%)
+				bottom: 10px

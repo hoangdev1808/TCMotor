@@ -1,0 +1,371 @@
+.product-frame
+	width: 100%
+	padding: 0
+	overflow: hidden
+	.hero-product
+		position: relative
+		display: flex
+		align-items: center
+		.wrap-slide
+			width: calc( 100% - 33.33% )
+			position: relative
+			.swiper-inner
+				.img
+					max-width: 1000px
+					margin: 0 auto
+					a
+						+img-ratio(780/1000)
+			.swiper-button-next,
+			.swiper-button-prev
+				width: 32px
+				height: 32px
+				border-radius: 16px
+				background: $white-f4
+				&::after
+					color: $black-1
+					font-family: Material Icons
+					font-size: r(18px)
+					font-weight: 400
+					line-height: 30px
+					text-align: center
+				&:focus
+					outline: none
+			.swiper-button-next
+				right: 62px
+				&::after
+					content: 'chevron_right'
+			.swiper-button-prev
+				left: 62px
+				&::after
+					content: 'chevron_left'
+		.wrap-infor-product
+			width: 33.33%
+			padding-left: 60px
+			padding-top: 50px
+			padding-right: 54px
+			padding-bottom: 75px
+			background: rgba($color: $white-f4, $alpha: .5)
+			@media screen and ( max-width: 1600px )
+				padding: 50px 30px
+			.section-title
+				padding-bottom: 32px
+				color: $black-1
+				max-width: 285px
+			.container--tabs
+				.nav-tabs
+					width: 100%
+					height: 40px
+					border-radius: 20px
+					background: #e1e1e1
+					padding: 4px
+					margin-bottom: 20px
+					li
+						width: 50%
+						height: 32px
+						a
+							display: flex
+							align-items: center
+							justify-content: center
+							width: 100%
+							height: 100%
+							color: $gray
+							font-size: 14px
+							font-weight: 500
+						&.active
+							a
+								box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
+								border-radius: 16px
+								background: $white
+								color: $black-1
+				.tab-content
+					.tab-panel
+						table
+							width: 100%
+							margin-bottom: 30px
+							tr
+								td
+									padding-left: 20px
+									@media screen and ( max-width: 1600px )
+										padding-left: 10px
+								&:first-child
+									td
+										text-align: center
+										p
+											color: $black-1
+											font-size: r(14px)
+											font-weight: 400
+											line-height: 18px
+								&:last-child
+									td
+										text-align: center
+										color: $black-1
+										font-size: r(14px)
+										font-weight: 900
+										line-height: 26px
+
+						.wrap-filter
+							.form-row
+								display: flex
+								align-items: flex-start
+								.form-group
+									display: flex
+									flex-direction: column
+									margin-bottom: 20px
+									label
+										color: $gray
+										font-size: 12px
+										font-weight: 400
+										line-height: 20px
+										text-transform: uppercase
+										padding-bottom: 10px
+									select
+										width: 100%
+										height: 40px
+										border-radius: 20px
+										background: $white
+										padding-left: 15px
+										cursor: pointer
+										border: 1px solid $border
+										transition: all .3s
+										color: $black-1
+										font-size: 14px
+										font-weight: 500
+										&:focus
+											border: 3px solid $blue-00
+											border-radius: 20px
+										&:hover
+											border: 3px solid $blue-00
+									&:first-child
+										width: 41.92%
+
+									&:last-child
+										width: 53.2%
+										margin-left: auto
+								&:nth-child(2)
+									.form-group
+										width: 100%
+										ul
+											display: flex
+											align-items: center
+											li
+												a
+													display: flex
+													align-items: center
+													justify-content: center
+													width: 30px
+													height: 30px
+													border-radius: 15px
+													border: 1px solid #e1e1e1
+													img
+														width: 100%
+														height: 100%
+												&.active
+													a
+														border-radius: 20px
+														border: 3px solid $blue-00
+														background-color: $white
+														padding: 2px
+												+ li
+													margin-left: 20px
+								&:nth-child(4)
+									.form-group
+										width: 100%
+										.price
+											display: flex
+											align-items: center
+											width: 100%
+											height: 44px
+											border-radius: 22px
+											background: $white-f4
+											padding-left: 20px
+											+ .price
+												margin-top: 20px
+											label
+												padding-bottom: 0
+												color: $black-1
+												font-size: 14px
+												font-weight: 500
+												text-transform: unset
+											.input
+												width: 404px
+												height: 40px
+												box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
+												border-radius: 20px
+												background: $white
+												margin-left: auto
+												display: flex
+												align-items: center
+												justify-content: center
+												color: $black-1
+												font-size: 20px
+												font-weight: 900
+												@media screen and ( max-width: 1600px )
+													width: 250px
+						.wrap-form
+							.form-row
+								.form-group
+									label
+										color: $gray
+										font-size: 12px
+										font-weight: 400
+										line-height: 20px
+										text-transform: uppercase
+										padding-bottom: 10px
+									input
+										width: 100%
+										height: 40px
+										border-radius: 20px
+										border: 1px solid $border
+										background: $white
+										color: $black-1
+										font-size: r(14px)
+										font-weight: 500
+										line-height: 20px
+										&::placeholder
+											color: $black-1
+											font-size: r(14px)
+											font-weight: 500
+											line-height: 20px
+									&.qradio
+										.cf
+											display: flex
+											flex-wrap: wrap
+											flex-direction: row
+											li
+												display: flex
+												align-items: center
+												padding-bottom: 10px
+												flex: 1 0 50%
+												input[type="radio"]
+													display: none
+													width: 17px
+													height: 16px
+													&:checked ~ label::before
+														content: 'radio_button_checked'
+														color: $black
+													&:checked ~ label
+														color: $black
+												label
+													color: $black-1
+													font-size: r(14px)
+													font-weight: 500
+													line-height: 20px
+													text-transform: unset
+													padding-bottom: 0
+													position: relative
+													padding-left: 25px
+													&:before
+														font-family: Material Icons
+														content: 'radio_button_unchecked'
+														font-size: 20px
+														display: block
+														line-height: 14px
+														color: $black-1
+														position: absolute
+														top: 50%
+														left: 0
+														transform: translateY(-50%)
+														transition: all, 0.5s
+												&:last-child
+													padding-bottom: 0
+									&.agree
+										width: 100%
+										display: flex
+										align-items: center
+										input[type='checkbox']
+											display: none
+											width: 17px
+											height: 16px
+											&:checked ~ label::before
+												content: 'check_box'
+												color: $black
+											&:checked ~ label
+												color: $black
+										label
+											color: $gray
+											font-size: r(12px)
+											font-weight: 500
+											line-height: 18px
+											text-transform: unset
+											padding-bottom: 0
+											position: relative
+											padding-left: 25px
+											overflow: hidden
+											display: -webkit-box
+											text-overflow: ellipsis
+											-webkit-box-orient: vertical
+											-webkit-line-clamp: 2
+											&:before
+												font-family: Material Icons
+												content: 'check_box_outline_blank'
+												font-size: 18px
+												display: block
+												line-height: 14px
+												color: $black-1
+												position: absolute
+												top: 50%
+												left: 0
+												transform: translateY(-50%)
+												transition: all, 0.5s
+							.form-group
+								&.frm-btnwrap
+									.frm-btn
+										position: relative
+										width: max-content
+										input
+											width: 168px
+											height: 44px
+											border-radius: 22px
+											background: $blue-00
+											color: $white
+											transition: all .5s
+										&::before
+											content: 'add'
+											font-family: Material Icons
+											display: flex
+											align-items: center
+											justify-content: center
+											position: absolute
+											left: 15px
+											top: 50%
+											color: $white
+											font-size: 22/16*1rem
+											transform: translateY(-50%)
+											transition: all .5s
+
+										&:hover
+											input
+												background: $white
+												color: $black-1
+											&::before
+												color: $black-1
+
+								&:nth-child(2)
+									display: flex
+									align-items: flex-start
+									.form-group
+										&:first-child
+											width: 41.92%
+										&:last-child
+											width: 53.2%
+											margin-left: auto
+		@media screen and ( max-width: 1366px )
+			.wrap-slide
+				width: calc( 100% - 40% )
+			.wrap-infor-product
+				width: 40%
+				.section-title
+					max-width: 100%
+		@media screen and ( max-width: 1199.98px )
+			.wrap-slide
+				width: calc( 100% - 45% )
+			.wrap-infor-product
+				width: 45%
+
+		@media screen and ( max-width: 991.98px )
+			flex-direction: column
+			.wrap-slide
+				width: 100%
+			.wrap-infor-product
+				width: 100%
+				padding: 30px 15px

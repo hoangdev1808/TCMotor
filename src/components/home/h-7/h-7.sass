@@ -1,0 +1,96 @@
+.library-frame
+	.section-title
+		padding-bottom: 31px
+	.container--tabs
+		max-width: 1280px
+		margin: 0 auto
+		.nav-tabs
+			max-width: 400px
+			height: 40px
+			border-radius: 20px
+			margin: 0 auto
+			background: $white-f4
+			li
+				display: flex
+				align-items: center
+				justify-content: center
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 120px
+					height: 32px
+					color: $gray
+					font-size: r(14px)
+					font-weight: 500
+					letter-spacing: -0.35px
+
+				&.active
+					a
+						box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
+						border-radius: 16px
+						background-color: $white
+						color: $black-1
+						font-weight: 700
+						text-transform: uppercase
+				+ li
+					margin-left: auto
+		.tab-content
+			padding-top: 20px
+			.tab-panel
+				.slide-panel
+					position: relative
+					.gallery-top
+						.swiper-inner
+							position: relative
+							.img
+								+img-ratio(550/1200)
+							.icons
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -50%)
+								width: 80px
+								height: 80px
+								border-radius: 50%
+								background: $blue-00
+								display: flex
+								align-items: center
+								justify-content: center
+								z-index: 99
+					.thumbs
+						display: flex
+						align-items: center
+						max-width: 450px
+						margin: 0 auto
+						.title
+							color: $gray
+							font-size: 16px
+							font-weight: 400
+							font-style: normal
+							letter-spacing: normal
+							line-height: 26px
+							text-align: left
+							text-transform: uppercase
+						.gallery-thumbs
+							width: 370px
+							.swiper-slide
+								.color-item
+									width: 36px
+									height: 36
+									border-radius: 18px
+									border: 1px solid $gray-e5
+									display: flex
+									align-items: center
+									justify-content: center
+								&-thumb-active
+									.color-item
+										border-radius: 20px
+										border: 3px solid $blue-00
+										background-color: $white
+										padding: 2px
+						@media screen and ( max-width: 575.98px )
+							max-width: 100%
+							flex-direction: column
+							.gallery-thumbs
+								width: 50%

@@ -1,0 +1,147 @@
+.hero-header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 1000
+	// background: $blue-03
+	.navbar
+		display: flex
+		align-items: center
+		padding: r(38px) r(60px)
+		.navbar-brand
+			width: 270px
+		.navbar-menu
+			display: flex
+			align-items: center
+			margin-left: auto
+			height: 100%
+			.navbar-start
+				width: 100%
+				display: flex
+				align-items: center
+				.nav-item
+					.nav-link
+						position: relative
+						text-shadow: 1px 2px 0 rgba(0, 51, 92, 0.2)
+						font-size: 1rem
+						padding: .5rem 0
+						&::after
+							position: absolute
+							top: 100%
+							left: 50%
+							width: 0
+							height: 1px
+							background: $white
+							transform: translateX(-50%)
+							transition: all .5s
+							content: ''
+					+ .nav-item
+						margin-left: 31px
+					&:hover,
+					&.active
+						.nav-link
+							&::after
+								width: 100%
+
+			.navbar-end
+				margin-left: 70px
+				padding-left: 34px
+				position: relative
+				.language
+					.language-active
+						display: flex
+						align-items: center
+						&.dropdown
+							.dropdown-menu
+								padding: 10px 0
+								li
+									display: flex
+									align-items: center
+									justify-content: center
+				&::before
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					content: ''
+					width: 1px
+					height: 12px
+					background: $white
+					opacity: 0.25
+		@media screen and ( max-width: 1479.98px )
+			.navbar-menu
+				.navbar-start
+					.nav-item
+						.nav-link
+							font-size: r(14px)
+					.nav-item + .nav-item
+						margin-left: 20px
+				.navbar-end
+					margin-left: 30px
+					padding-left: 20px
+		@media screen and ( max-width: 1279.98px )
+			.navbar-brand
+				width: 220px
+			.navbar-menu
+				.navbar-start
+					.nav-item + .nav-item
+						margin-left: 16px
+		@media screen and ( max-width: 1199.98px )
+			.navbar-brand
+				width: auto
+			.navbar-menu
+				.navbar-start
+					position: absolute
+					right: 0
+					top: 100%
+					flex-direction: column
+					align-items: flex-start
+					width: 30vw
+					height: 100vh
+					background: rgba(0, 51, 92, 0.3)
+					padding: 50px
+					display: none
+					.nav-item
+						transform: translateX(100%)
+						opacity: 0
+						transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+						.nav-link
+							font-size: 1rem
+					.nav-item + .nav-item
+						margin-left: 0
+						margin-top: 30px
+					&.active
+						.nav-item
+							opacity: 1
+							transform: translateX(0)
+							&:nth-child(1)
+								transition-delay: .1s
+							&:nth-child(2)
+								transition-delay: .2s
+							&:nth-child(3)
+								transition-delay: .3s
+							&:nth-child(4)
+								transition-delay: .4s
+							&:nth-child(5)
+								transition-delay: .5s
+							&:nth-child(6)
+								transition-delay: .6s
+							&:nth-child(7)
+								transition-delay: .7s
+							&:nth-child(8)
+								transition-delay: .8s
+							&:nth-child(9)
+								transition-delay: .9s
+		@media screen and ( max-width: 991.98px )
+			padding: r(20px)
+			.navbar-menu
+				.navbar-start
+					width: 55vw
+		@media screen and ( max-width: 575.98px )
+			.navbar-menu
+				.navbar-start
+					width: 80vw
+	&.header-croll-down
+		background: $blue-03
+		transition: all .5s

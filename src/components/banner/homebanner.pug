@@ -1,0 +1,36 @@
+section#home-banner 
+	.home-banner
+		.swiper-container
+			.swiper-wrapper
+				-for(i=1; i<5; i++)
+					.swiper-slide
+						.swiper-inner
+							.img
+								a(href="")
+									img(src="./img/banner/b-"+i+".png", alt="")
+							.wrap-content 
+								ul 
+									li 
+										.content 
+											h1.title New Santa Fe
+											h2.sub-title Bứt phá tiên phong
+									li 
+										.content 
+											p Công suất cực đại 
+												br 
+												|(PS/rpm)
+											p
+												strong 202/3.800
+									li 
+										.content 
+											p Mô men xoắn cực đại 
+												br 
+												|(Nm/rpm)
+											p
+												strong 440/1.750-2.750
+								.button 
+									a.btn.btn-booking(href="") 
+										em.material-icons add
+										|Đặt hàng ngay
+
+		.swiper-pagination

@@ -1,0 +1,58 @@
+.engine-frame
+	width: 100%
+	height: 100vh
+	background: $black
+	position: relative
+	background-attachment: fixed
+	.wrapper-content
+		position: absolute
+		left: 0
+		width: 100%
+		bottom: 117px
+		.item
+			.section-title
+				padding-bottom: 29px
+				color: $white
+			.content
+				.icon
+					padding-bottom: 26px
+					padding-top: 70px
+				.title
+					color: $white
+					font-size: 18px
+					line-height: 26px
+					font-weight: 700
+				p
+					color: $white
+					font-size: r(18px)
+					line-height: 26px
+					font-weight: 400
+		.col-lg-4
+			&:first-child
+				.item
+					.content
+						padding-right: 120px
+						margin-bottom: 45px
+		@media screen and ( max-width: 1199.98px )
+			.item
+				.content
+					.icon
+						padding-top: 30px
+			.col-lg-4
+				&:first-child
+					.item
+						.content
+							padding-right: 0
+		@media screen and ( max-width: 1199.98px )
+			bottom: 30px
+			.item
+				.content
+					.icon
+						padding-bottom: 10px
+				.section-title
+					padding-bottom: 15px
+			.col-lg-4
+				&:first-child
+					.item
+						.content
+							margin-bottom: 15px

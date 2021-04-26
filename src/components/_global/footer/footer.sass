@@ -1,0 +1,164 @@
+footer
+	padding-top: 113px
+	padding-bottom: 52px
+	background: $blue-03
+	@media screen and ( max-width: 991.98px )
+		padding: 30px 0
+	.hero-footer
+		max-width: 1170px
+		margin: 0 auto
+		.wrap-top
+			padding-bottom: 60px
+			display: flex
+			align-items: flex-start
+			.wrap-logo
+				min-width: 309px
+				padding-right: 20px
+				padding-top: 25px
+			.wrap-infor
+				max-width: 630px
+				.title
+					position: relative
+					padding-right: 100px
+					padding-left: 15px
+					margin-bottom: 30px
+					h1
+						color: $white
+						font-size: r(30px)
+						font-weight: 500
+						line-height: 38px
+						text-align: left
+						text-transform: uppercase
+						letter-spacing: -0.75px
+					&::before
+						position: absolute
+						left: 0
+						top: 50%
+						transform: translateY(-50%)
+						width: 1px
+						height: 99px
+						background: $white
+						content: ''
+				.content
+					padding-right: 65px
+					ul
+						li
+							p
+								color: $white
+								font-size: 16px
+								font-weight: 400
+								line-height: 26px
+			.wrap-end
+				.title
+					padding-bottom: 23px
+					color: $white
+					font-size: 18px
+					font-weight: 500
+					line-height: 30px
+				ul
+					li
+						a
+							color: $white
+							font-size: 1rem
+							line-height: 30px
+							text-decoration: underline
+			@media screen and ( max-width: 1366px )
+				.wrap-infor
+					.title
+						padding-right: 80px
+						h1
+							font-size: r(20px)
+			@media screen and ( max-width: 1199.98px )
+				.wrap-infor
+					max-width: 100%
+					width: 420px
+			@media screen and ( max-width: 991.98px )
+				flex-wrap: wrap
+				flex-direction: row
+				.wrap-logo
+					min-width: unset
+					width: 100%
+					padding: 30px 0
+					text-align: center
+				.wrap-infor
+					max-width: unset
+					width: 78%
+					padding-right: 15px
+					.title
+						margin-bottom: 15px
+						padding-right: 0
+						h1
+							font-size: r(18px)
+						&::before
+							height: 100%
+					.content
+						ul
+							li
+								p
+									font-size: r(14px)
+				.wrap-end
+					padding-left: 15px
+					width: 22%
+					.title
+						padding-bottom: 7px
+						font-size: r(18px)
+					ul
+						li
+							a
+								font-size: r(14px)
+			@media screen and ( max-width: 767.98px )
+				.wrap-infor
+					width: 65%
+				.wrap-end
+					width: 35%
+			@media screen and ( max-width: 575.98px )
+				padding-bottom: 30px
+				.wrap-infor
+					width: 100%
+					padding-right: 0
+				.wrap-end
+					margin-top: 30px
+					width: 100%
+					padding-left: 0
+		.wrap-coppyright
+			width: 100%
+			display: flex
+			align-items: center
+			padding-top: 31px
+			border-top: solid 1px $white
+			.socail
+				ul
+					display: flex
+					align-items: center
+					li
+						a
+							display: flex
+							align-items: center
+							justify-content: center
+							width: 22px
+							height: 22px
+							border-radius: 2px
+							background-color: $white
+						+ li
+							margin-left: 5px
+			.design-by-canhcam
+				margin-left: 22px
+				color: $white
+				font-size: 12px
+				line-height: 18px
+				text-align: center
+				letter-spacing: 1.2px
+				@media screen and ( max-width: 767.98px )
+					margin-left: auto
+			.wrap-ctlogo
+				margin-left: auto
+			@media screen and ( max-width: 575.98px )
+				flex-direction: column
+				.design-by-canhcam
+					margin-left: 0
+					margin-top: 10px
+					order: 3
+				.wrap-ctlogo
+					margin-left: 0
+					margin-top: 10px
+					order: 2
