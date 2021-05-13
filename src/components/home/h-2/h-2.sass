@@ -34,8 +34,17 @@
 			.button
 				.btn-booking
 					border: 2px solid $black-1
-
 	@media screen and ( max-width: 1500px )
+		.hero-frame
+			.wrap-content
+				padding-top: 50px
+				padding-right: 50px
+	@media screen and ( max-width: 1280px )
+		.hero-frame
+			.wrap-content
+				padding-left: 30px
+				padding-right: 30px
+	@media screen and ( max-width: 1199.98px )
 		.hero-frame
 			position: relative
 			.wrap-img
@@ -44,8 +53,8 @@
 				position: absolute
 				width: 35%
 				padding: 0
-				bottom: 260px
-				left: 35px
+				bottom: 200px
+				left: 125px
 				.section-title
 					color: $white
 				.content
@@ -60,6 +69,13 @@
 				width: 80%
 				bottom: 50px
 	@media screen and ( max-width: 575.98px )
+		height: 80vh
 		.hero-frame
 			.wrap-content
+				padding: 15px
 				left: 15px
+				background: rgba($color: $main, $alpha: .5)
+				.section-title
+					padding-bottom: 10px
+				.content
+					margin-bottom: 20px

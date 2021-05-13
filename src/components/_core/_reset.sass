@@ -28,7 +28,7 @@ body
 	margin: 0
 body, html
 	font-size: 16px
-	@media screen and ( max-width: 575.98px )
+	@media screen and ( max-width: 1440.98px )
 		font-size: 14/16*1rem
 
 *
@@ -178,6 +178,18 @@ button, select
 
 select
 	word-wrap: normal
+	-webkit-appearance: none
+	-moz-appearance: none
+	-ms-appearance: none
+	appearance: none
+	position: relative
+	background-image: url('../img/icon/down.png')
+	background-repeat: no-repeat
+	background-position: 94%
+	color: $main
+	border: none
+	&::-ms-expand
+		display: none
 
 button, [type="button"], [type="reset"], [type="submit"]
 	-webkit-appearance: button

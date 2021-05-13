@@ -1,96 +1,122 @@
 .library-frame
 	.section-title
 		padding-bottom: 31px
-	.container--tabs
-		max-width: 1280px
-		margin: 0 auto
-		.nav-tabs
-			max-width: 400px
-			height: 40px
-			border-radius: 20px
-			margin: 0 auto
-			background: $white-f4
-			li
+	.tabs_wrapper
+		width: 100%
+		.tabs
+			ul
 				display: flex
 				align-items: center
 				justify-content: center
-				a
-					display: flex
-					align-items: center
-					justify-content: center
+				padding: 4px
+			&.tabs-parent
+				width: 400px
+				height: 40px
+				margin: 0 auto
+				border-radius: 20px
+				background: $white-f4
+				@media screen and ( max-width: 575.98px )
+					width: 100%
+				li
 					width: 120px
 					height: 32px
-					color: $gray
-					font-size: r(14px)
-					font-weight: 500
-					letter-spacing: -0.35px
-
-				&.active
 					a
-						box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
-						border-radius: 16px
-						background-color: $white
-						color: $black-1
-						font-weight: 700
-						text-transform: uppercase
-				+ li
-					margin-left: auto
-		.tab-content
-			padding-top: 20px
-			.tab-panel
-				.slide-panel
-					position: relative
-					.gallery-top
-						.swiper-inner
-							position: relative
-							.img
-								+img-ratio(550/1200)
-							.icons
-								position: absolute
-								top: 50%
-								left: 50%
-								transform: translate(-50%, -50%)
-								width: 80px
-								height: 80px
-								border-radius: 50%
-								background: $blue-00
-								display: flex
-								align-items: center
-								justify-content: center
-								z-index: 99
-					.thumbs
 						display: flex
 						align-items: center
-						max-width: 450px
-						margin: 0 auto
-						.title
-							color: $gray
-							font-size: 16px
-							font-weight: 400
-							font-style: normal
-							letter-spacing: normal
-							line-height: 26px
-							text-align: left
+						justify-content: center
+						width: 100%
+						height: 100%
+						color: $gray
+						font-size: 14px
+						font-weight: 500
+						letter-spacing: -0.35px
+					+ li
+						margin-left: auto
+					&.active
+						box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
+						border-radius: 16px
+						background: $white
+						a
+							color: $black-1
+							font-size: 14px
+							font-weight: 700
 							text-transform: uppercase
-						.gallery-thumbs
-							width: 370px
-							.swiper-slide
-								.color-item
-									width: 36px
-									height: 36
-									border-radius: 18px
-									border: 1px solid $gray-e5
-									display: flex
-									align-items: center
-									justify-content: center
-								&-thumb-active
-									.color-item
-										border-radius: 20px
-										border: 3px solid $blue-00
-										background-color: $white
-										padding: 2px
+							letter-spacing: -0.35px
+			&.tabs-child
+				display: flex
+				align-items: center
+				justify-content: center
+				.label
+					padding-right: 30px
+					color: $gray
+					font-size: 16px
+					font-weight: 400
+					line-height: 26px
+					text-transform: uppercase
+				ul
+					li
+						width: 36px
+						height: 36px
+						border-radius: 18px
+						border: 1px solid $gray-e5
+						a
+							img
+								width: 100%
+								height: 100%
+						+ li
+							margin-left: 15px
+						&.active
+							width: 46px
+							height: 46px
+							border-radius: 23px
+							border: 3px solid $blue-00
+				@media screen and ( max-width: 575.98px )
+					ul
+						flex-wrap: wrap
+						flex-direction: row
+						.label
+							width: 100%
+							text-align: center
+							padding: 0
+		.tabs_content
+			.tab_content
+				display: none
+				.panel
+					padding: 30px 0
+					position: relative
+					.img
+						max-width: 1280px
+						margin: 0 auto
+						+img-scale(.4)
 						@media screen and ( max-width: 575.98px )
-							max-width: 100%
-							flex-direction: column
-							.gallery-thumbs
-								width: 50%
+							+img-scale(.8)
+					.swiper-button-next,
+					.swiper-button-prev
+						width: 32px
+						height: 32px
+						border-radius: 16px
+						background: $white-f4
+						&::after
+							color: $black-1
+							font-family: Material Icons
+							font-size: r(18px)
+							font-weight: 400
+							line-height: 30px
+							text-align: center
+						&:focus
+							outline: none
+					.swiper-button-next
+						right: 62px
+						&::after
+							content: 'chevron_right'
+					.swiper-button-prev
+						left: 62px
+						&::after
+							content: 'chevron_left'
+					@media screen and ( max-width: 575.98px )
+						.swiper-button-next
+							right: 0
+						.swiper-button-prev
+							left: 0
+				&.active
+					display: block

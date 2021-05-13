@@ -3,9 +3,11 @@
 	height: 100vh
 	position: relative
 	background-attachment: fixed
+	background-repeat: no-repeat
 	.wrapper-content
 		position: absolute
 		bottom: 260px
+		padding-left: 105px
 		.section-title
 			padding-bottom: 30px
 		.content
@@ -16,7 +18,10 @@
 				line-height: 26px
 			.button
 				margin-top: 45px
+		@media screen and ( max-width: 1199.98px )
+			padding-left: 0
 		@media screen and ( max-width: 991.98px )
+			padding: 0 15px
 			bottom: auto
 			top: 50%
 			transform: translateY(-50%)
@@ -25,3 +30,5 @@
 			.content
 				.button
 					margin-top: 15px
+	@media screen and ( max-width: 575.98px )
+		background-attachment: scroll

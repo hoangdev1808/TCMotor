@@ -95,6 +95,7 @@
 						padding-left: 30px
 				@media screen and ( max-width: 767.98px )
 					flex-direction: column
+					bottom: 50px
 					ul
 						flex-wrap: wrap
 						flex-direction: row
@@ -104,7 +105,7 @@
 							margin-bottom: 20px
 							.content
 								.title
-									font-size: r(18px)
+									font-size: r(30px)
 								.sub-title
 									font-size: 1rem
 		.swiper-pagination
@@ -130,3 +131,44 @@
 				top: auto
 				transform: translateX(-50%)
 				bottom: 10px
+			@media screen and ( max-width: 575.98px )
+				bottom: 30px
+		.swiper-button-next,
+		.swiper-button-prev
+			width: 50px
+			height: 50px
+			&::after
+				color: $white
+				font-family: Material Icons
+				font-size: r(40px)
+				line-height: 30px
+				text-align: center
+			&:focus
+				outline: none
+		.swiper-button-next
+			right: 62px
+			&::after
+				content: 'chevron_right'
+		.swiper-button-prev
+			left: 62px
+			&::after
+				content: 'chevron_left'
+		@media screen and ( max-width: 575.98px )
+			.swiper-inner
+				.img
+					top: 40%
+					width: 100%
+					padding: 0 15px
+				.wrap-content
+					bottom: 50px
+					ul
+						justify-content: center
+						li
+							flex: unset
+							&:first-child
+								padding: 0
+								width: 100%
+								.content
+									text-align: center
+					.button
+						padding: 0

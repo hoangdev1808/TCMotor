@@ -7,7 +7,7 @@
 	// Insert spaces when pressing Tab. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
 	"editor.insertSpaces": false,
 	"editor.wordWrap": "on",
-	"codeMap.ShowOrHide": "hide",
+	"codeMap.ShowOrHide": "show",
 	"codeMap.GraphMode": "NotSelect",
 	"compile-hero.disable-compile-files-on-did-save-code": true,
 	"ponicode.testSettings.testLocation.locationType": "Same folder as source file",

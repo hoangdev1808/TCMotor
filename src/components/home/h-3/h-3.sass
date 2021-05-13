@@ -4,11 +4,13 @@
 	background: $black
 	position: relative
 	background-attachment: fixed
+	background-repeat: no-repeat
+	overflow: hidden
 	.wrapper-content
-		position: absolute
-		left: 0
-		width: 100%
-		bottom: 117px
+		height: 100vh
+		display: flex
+		align-items: flex-end
+		padding-bottom: 215px
 		.item
 			.section-title
 				padding-bottom: 29px
@@ -33,17 +35,16 @@
 					.content
 						padding-right: 120px
 						margin-bottom: 45px
-		@media screen and ( max-width: 1199.98px )
+		@media screen and ( max-width: 1440px )
+			padding: 0 105px
+			align-items: center
 			.item
 				.content
-					.icon
-						padding-top: 30px
-			.col-lg-4
-				&:first-child
-					.item
-						.content
-							padding-right: 0
+					p
+						font-size: r(14px)
+
 		@media screen and ( max-width: 1199.98px )
+			padding: 0
 			bottom: 30px
 			.item
 				.content
@@ -56,3 +57,11 @@
 					.item
 						.content
 							margin-bottom: 15px
+		@media screen and ( max-width: 575.98px )
+			.item
+				margin-bottom: 30px
+				.content
+					.icon
+						padding-top: 0
+	@media screen and ( max-width: 575.98px )
+		background-attachment: scroll

@@ -91,6 +91,8 @@
 					width: 40px
 					height: 40px
 					font-size: r(20px)
+					em
+						font-size: r(26px)
 			&:nth-child(2)
 				.social-item
 					em
@@ -141,3 +143,24 @@
 	// display: flex
 	transition: .3s all ease-in-out
 	// bottom: 1.5rem
+.fancybox-close-small
+	position: absolute
+	top: 0 !important
+	right: -45px !important
+	padding: 0 !important
+	width: 45px !important
+	height: 45px !important
+	background: #020277 !important
+	z-index: 9999
+	svg
+		display: none !important
+	&::before
+		content: 'close'
+		color: $white
+		font-family: "Material Icons"
+		font-size: 30px
+		font-weight: 400
+		line-height: 30px
+		text-align: center
+	@media screen and ( max-width: 1024.98px )
+		right: 0 !important

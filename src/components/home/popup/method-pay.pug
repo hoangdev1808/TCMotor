@@ -1,0 +1,54 @@
+#methodpay.method-pay 
+	.wrapper-content
+		.popup-title chọn hình thức thanh toán 
+		.form-row
+			.form-group.qradio 
+				ul.cf
+					li 
+						input(id="visa-popup" type="radio" name="payment" value="visa" checked)
+						label(for="visa-popup") Thẻ Visa, Master Card
+					li 
+						input(id="atm-popup" type="radio" name="payment" value="atm")
+						label(for="atm-popup") Thẻ ATM nội địa
+					li 
+						input(id="banking-popup" type="radio" name="payment" value="banking")
+						label(for="banking-popup") Chuyển khoản ngân hàng
+		.wrap-table 
+			.title-tabel Thông tin chuyển khoản đặt cọc
+			table 
+				tr 
+					td Ngân hàng 
+					td Ngân hàng Thương mại cổ phần Kỹ Thương Việt Nam ( Techcombank)
+				tr 
+					td Số tài khoản
+					td  
+						input#foo(value='190351928xxxxx' dis)
+						button.btn-clipboard(data-clipboard-target='#foo')
+							em.ri-clipboard-line
+				tr 
+					td Tên tài khoản
+					td Công ty Cổ phần liên doanh ô tô Huyndai Thành công Việt Nam ( HTC - VN ., JSC)
+				tr 
+					td Nội dung
+					td Khách hàng - SDT nop coc xe Santafe
+		.note Sau khi chuyển khoản, Quý khách vui lòng làm theo các bước dưới đây
+		.form-row 
+			.form-group.qupload 
+				label.label(for="") Tải lên Ủy nhiệm chi/ Biên lai chuyển tiền
+				.RadUpload
+					.ruInputs
+						label.custom-file-upload(for='file-upload')
+						input#file-upload(type='file' multiple)
+						.text-file Chọn file
+			.note
+				p Chỉ tải file ảnh hoặc PDF, dung lượng nhỏ hơn 3MB/ File. Quý khách có thể tải lên tối đa 5 file bằng cách giữ phím Ctrl + click chuột.
+				p Trong trường hợp Quý khách cần hỗ trợ khác, vui lòng liên hệ ngay với chúng tôi. Hotline  +84 (24) 37951116
+		.price  Số tiến đặt cọc 
+			p 50,000,000
+				span đ
+		.button 
+			a.btn.btn-check-out(href="") Tiến hành thanh toán
+
+
+
+

@@ -5,23 +5,19 @@ footer
 	@media screen and ( max-width: 991.98px )
 		padding: 30px 0
 	.hero-footer
-		max-width: 1170px
-		margin: 0 auto
 		.wrap-top
+			width: 100%
 			padding-bottom: 60px
-			display: flex
-			align-items: flex-start
 			.wrap-logo
 				min-width: 309px
-				padding-right: 20px
 				padding-top: 25px
 			.wrap-infor
-				max-width: 630px
+				max-width: 565px
 				.title
 					position: relative
-					padding-right: 100px
-					padding-left: 15px
 					margin-bottom: 30px
+					padding-left: 15px
+
 					h1
 						color: $white
 						font-size: r(30px)
@@ -29,7 +25,7 @@ footer
 						line-height: 38px
 						text-align: left
 						text-transform: uppercase
-						letter-spacing: -0.75px
+						letter-spacing: -0.25px
 					&::before
 						position: absolute
 						left: 0
@@ -40,14 +36,16 @@ footer
 						background: $white
 						content: ''
 				.content
-					padding-right: 65px
+					padding-left: 15px
+
 					ul
 						li
 							p
 								color: $white
-								font-size: 16px
 								font-weight: 400
 								line-height: 26px
+					@media screen and ( max-width: 575.98px )
+						padding-right: 0
 			.wrap-end
 				.title
 					padding-bottom: 23px
@@ -61,29 +59,23 @@ footer
 							color: $white
 							font-size: 1rem
 							line-height: 30px
+							letter-spacing: -.25px
 							text-decoration: underline
-			@media screen and ( max-width: 1366px )
-				.wrap-infor
-					.title
-						padding-right: 80px
-						h1
-							font-size: r(20px)
-			@media screen and ( max-width: 1199.98px )
-				.wrap-infor
-					max-width: 100%
-					width: 420px
+			.col-lg-2
+				&:nth-child(4)
+					.wrap-end
+						padding-top: 53px
+						.title
+							display: none
 			@media screen and ( max-width: 991.98px )
-				flex-wrap: wrap
-				flex-direction: row
 				.wrap-logo
 					min-width: unset
 					width: 100%
-					padding: 30px 0
 					text-align: center
+					margin-bottom: 30px
 				.wrap-infor
 					max-width: unset
-					width: 78%
-					padding-right: 15px
+					margin-bottom: 30px
 					.title
 						margin-bottom: 15px
 						padding-right: 0
@@ -97,8 +89,6 @@ footer
 								p
 									font-size: r(14px)
 				.wrap-end
-					padding-left: 15px
-					width: 22%
 					.title
 						padding-bottom: 7px
 						font-size: r(18px)
@@ -106,18 +96,12 @@ footer
 						li
 							a
 								font-size: r(14px)
-			@media screen and ( max-width: 767.98px )
-				.wrap-infor
-					width: 65%
-				.wrap-end
-					width: 35%
 			@media screen and ( max-width: 575.98px )
 				padding-bottom: 30px
 				.wrap-infor
 					width: 100%
 					padding-right: 0
 				.wrap-end
-					margin-top: 30px
 					width: 100%
 					padding-left: 0
 		.wrap-coppyright

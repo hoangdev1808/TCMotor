@@ -1,0 +1,507 @@
+.method-pay
+	padding-left: 60px !important
+	padding-right: 50px !important
+	padding-top: 30px !important
+	padding-bottom: 50px !important
+	width: 930px
+	margin: 0 auto
+	background: $white
+	overflow: visible !important
+	.wrapper-content
+		.form-row
+			margin-bottom: 28px
+			.form-group
+				&.qradio
+					.cf
+						li
+							display: flex
+							align-items: center
+							input[type="radio"]
+								display: none
+								width: 17px
+								height: 16px
+								&:checked ~ label::before
+									content: 'radio_button_checked'
+									color: $blue-00
+
+							label
+								color: $black-1
+								font-size: r(14px)
+								font-weight: 500
+								line-height: 20px
+								text-transform: unset
+								padding-bottom: 0
+								position: relative
+								padding-left: 25px
+								&:before
+									font-family: Material Icons
+									content: 'radio_button_unchecked'
+									font-size: 20px
+									display: block
+									line-height: 14px
+									color: #999999
+									position: absolute
+									top: 50%
+									left: 0
+									transform: translateY(-50%)
+									transition: all, 0.5s
+							+ li
+								margin-top: 10px
+		.wrap-table
+			width: 100%
+			padding: 30px
+			padding-bottom: 36px
+			margin-bottom: 16px
+			padding-right: 70px
+			background: #f6f6f6
+			.title-tabel
+				color: #333333
+				font-size: 1rem
+				font-weight: 700
+				line-height: 30px
+				padding-bottom: 20px
+				text-align: center
+			table
+				width: 100%
+
+				tr
+					td
+						&:first-child
+							color: #333333
+							font-size: 16px
+							font-weight: 700
+							line-height: 30px
+						&:last-child
+							padding-left: 30px
+							color: #333333
+							font-size: 1rem
+							font-weight: 400
+							line-height: 30px
+							font-weight: 400
+					&:nth-child(2)
+						td
+							&:last-child
+								display: flex
+								#foo
+									width: max-content
+									font-weight: 700
+									padding-left: 0
+									border: none
+									background: transparent
+									pointer-events: none
+								button
+									border: none
+		.note
+			color: #333333
+			font-size: 16px
+			font-weight: 400
+			line-height: 30px
+		.form-row
+			.form-group
+				&.qupload
+					label
+						color: #333333
+						font-size: 16px
+						font-weight: 400
+						line-height: 30px
+						padding-bottom: 15px
+					.RadUpload
+						.ruInputs
+							position: relative
+							width: 100%
+							height: 40px
+							border-radius: 20px
+							border: 2px solid $gray-eb
+							background: $white
+							text-align: right
+							margin-bottom: 17px
+							.custom-file-upload
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								padding: 0
+								padding-left: 10px
+								display: flex
+								align-items: center
+								justify-content: flex-start
+								overflow-x: auto
+								p
+									color: $main
+									font-size: r(11px)
+							.text-file
+								position: absolute
+								right: 0
+								top: 0
+								width: 130px
+								height: 100%
+								border-radius: 18px
+								border: none
+								background: #e1e1e1
+								display: flex
+								align-items: center
+								justify-content: center
+							input[type="file"]
+								position: absolute
+								right: 0
+								top: 0
+								z-index: 2
+								opacity: 0
+								width: 100%
+								height: 40px
+							.file-return
+								position: absolute
+								top: 50%
+								left: 15px
+								transform: translateY(-50%)
+								color: $main
+								font-size: r(14px)
+			.note
+				p
+					color: #999999
+					font-size: 14px
+					font-style: italic
+					line-height: 20px
+		.price
+			display: flex
+			color: #333333
+			font-size: 16px
+			font-weight: 700
+			line-height: 30px
+			p
+				color: $blue-00
+				font-size: 30px
+				font-weight: 700
+				line-height: 30px
+				text-align: left
+				margin-left: 24px
+				span
+					font-size: r(18px)
+		.button
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-top: 30px
+			.btn-check-out
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 400px
+				height: 44px
+				border-radius: 22px
+				background-color: $blue-00
+				color: $white-ef
+				font-size: 16px
+				font-weight: 700
+
+	@media screen and ( max-width: 1024.98px )
+		height: 80vh !important
+		overflow-y: auto !important
+	@media screen and ( max-width: 991.98px )
+		width: 100%
+		padding: 30px !important
+
+	@media screen and ( max-width: 767.98px )
+		.wrapper-content
+			.wrap-table
+				padding: 15px
+				table
+					tr
+						display: flex
+						flex-direction: column
+						td
+							&:last-child
+								padding-left: 0
+.check-infor
+	width: 480px
+	padding: 40px !important
+	padding-bottom: 55px !important
+	overflow: visible !important
+	.form-group
+		display: flex
+		flex-direction: column
+		margin-bottom: 20px
+		label
+			color: $black-1
+			font-size: 16px
+			font-weight: 500
+			line-height: 20px
+			padding-bottom: 12px
+		input
+			width: 400px
+			height: 40px
+			border-radius: 20px
+			border: 1px solid $gray-eb
+			background-color: #efefef
+			padding-left: 22px
+			color: #999999
+			font-size: 18px
+			font-weight: 500
+			line-height: 20px
+
+	.button
+		margin-bottom: 40px
+		.btn-check
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 400px
+			height: 44px
+			border-radius: 22px
+			background-color: $blue-00
+			color: $white-ef
+			font-size: 16px
+			font-weight: 700
+			transition: all .5s
+			&:hover
+				background: $main
+				color: $white
+				border: 2px solid transparent
+	.wrap-face-login
+		display: flex
+		flex-direction: column
+		label
+			color: $black-1
+			font-family: Roboto
+			font-size: 16px
+			font-weight: 500
+			line-height: 20px
+			margin-bottom: 20px
+		.btn-face,
+		.btn-google
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 400px
+			height: 44px
+			border-radius: 22px
+			color: $white-ef
+			font-size: 16px
+			font-weight: 700
+			em
+				font-size: 18px
+				padding-right: 20px
+		.btn-face
+			background: #4267b2
+			margin-bottom: 20px
+		.btn-google
+			background: #df4a32
+	@media screen and ( max-width: 575.98px )
+		width: 100%
+		.form-group
+			input
+				width: 100%
+		.button
+			.btn-check
+				width: 100%
+		.wrap-face-login
+			.btn-face,
+			.btn-google
+				width: 100%
+.otp
+	width: 480px
+	padding: 40px !important
+	overflow: visible !important
+	.form-group
+		margin-bottom: 20px
+		label
+			color: $black-1
+			font-size: 1rem
+			font-weight: 500
+			line-height: 20px
+			margin-bottom: 20px
+		input
+			width: 100%
+			height: 40px
+			border-radius: 20px
+			border: 2px solid $gray-eb
+			background-color: $white
+			padding-left: 20px
+		p
+			color: #999999
+			font-size: 1rem
+			font-weight: 400
+			line-height: 20px
+			text-align: center
+			padding-top: 14px
+	.btn-confirm,
+	.btn-core
+		width: 100%
+		height: 44px
+		border-radius: 22px
+		font-size: 1rem
+		font-weight: 700
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all .5s
+		&:hover
+			background: $main
+			color: $white
+			border: 2px solid transparent
+	.btn-confirm
+		background: $blue-00
+		color: $white-ef
+		margin-bottom: 20px
+	.form-group
+		.warning
+			p
+				display: flex
+				align-items: center
+				justify-content: center
+				padding-top: 14px
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+				img
+					padding-right: 7px
+	.btn-core
+		background: #cdeef6
+		color: $blue-00
+	@media screen and ( max-width: 991.98px )
+		padding: 30px !important
+.finish,
+.cancel,
+.advisory
+	padding: 40px !important
+	width: 480px
+	overflow: visible !important
+	@media screen and ( max-width: 991.98px )
+		padding: 30px !important
+.cancel,
+.finish
+	.img
+		text-align: center
+		margin-bottom: 15px
+.finish
+	width: 692px
+	.desc
+		p
+			color: $black-1
+			font-size: 18px
+			font-weight: 400
+			line-height: 24px
+.cancel
+	.desc
+		p
+			color: $black-1
+			font-size: 16px
+			font-weight: 500
+			line-height: 20px
+			span
+				color: $blue-00
+				font-weight: 700
+.popup-title
+	color: $blue-03
+	font-size: r(30px)
+	font-weight: 500
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: -0.75px
+	padding-bottom: 15px
+.advisory
+	.wrapper-content
+		.img
+			width: 80px
+			margin: 0 auto
+			text-align: center
+			margin-bottom: 15px
+		.desc
+			p
+				color: $black-1
+				font-size: 18px
+				font-weight: 400
+				line-height: 24px
+		.form-row
+			width: 100%
+			display: flex
+			flex-direction: column
+			.form-group
+				display: flex
+				flex-direction: column
+				margin-bottom: 20px
+				width: 100%
+				label
+					color: $black-1
+					font-size: 16px
+					font-weight: 500
+					line-height: 20px
+					padding-bottom: 12px
+					span
+						color: red
+				input,
+				select
+					width: 100%
+					height: 40px
+					border-radius: 20px
+					border: 2px solid $gray-eb
+					background-color: $white
+					padding-left: 22px
+					color: black-1
+					font-weight: 500
+					line-height: 20px
+			&:nth-child(2)
+				flex-direction: row
+				flex-wrap: wrap
+				.form-group
+					width: 50%
+					&:first-child
+						padding-right: 15px
+					&:last-child
+						padding-left: 15px
+		.button
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-top: 30px
+			input
+				border: none
+				width: 100%
+			.btn-check-out
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100%
+				height: 44px
+				border-radius: 22px
+				background-color: $blue-00
+				color: $white-ef
+				font-size: 16px
+				font-weight: 700
+				transition: all .5s
+				&:hover
+					background: $main
+					color: $white
+					border: 2px solid transparent
+.rules-popup
+	display: none
+	padding: 40px !important
+	width: 980px
+	overflow: visible !important
+	@media screen and ( max-width: 991.98px )
+		padding: 30px !important
+	.content
+		max-height: 50vh
+		overflow-y: auto
+		padding-right: 15px
+		&::-webkit-scrollbar-track
+			box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+			background-color: #cccccc
+			border-radius: 20px
+		&::-webkit-scrollbar
+			width: 4px
+			height: 4px
+		&::-webkit-scrollbar-thumb
+			border-radius: 20px
+			box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+			background-color: $main
+	p
+		font-size: r(14px)
+		line-height: 25px
+		padding-bottom: 14px
+	ul
+		list-style: inside
+.advisory
+	display: none

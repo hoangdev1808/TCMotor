@@ -19,14 +19,6 @@
 					top: 0
 					left: 0
 					line-height: 0
-					span
-						display: inline-block
-						width: 24px
-						height: 4px
-						background: $white
-						line-height: auto
-						+ span
-							margin-left: 4px
 				.content
 					display: flex
 					.text
@@ -53,30 +45,25 @@
 						flex-direction: column
 						.button
 							margin-left: 0
-		.swiper-button-next,
-		.swiper-button-prev
-			width: 32px
-			height: 32px
-			border-radius: 16px
-			background: $white-f4
-			&::after
-				color: $black-1
-				font-family: Material Icons
-				font-size: r(18px)
-				font-weight: 400
-				line-height: 30px
-				text-align: center
-			&:focus
-				outline: none
-			@media screen and ( max-width: 767.98px )
-				top: 30%
-		.swiper-button-next
-			right: 23px
-			&::after
-				content: 'chevron_right'
-		.swiper-button-prev
-			left: 23px
-			&::after
-				content: 'chevron_left'
+		.swiper-pagination
+			min-width: 110px
+			position: absolute
+			bottom: 18%
+			.swiper-pagination-bullet
+				width: 24px
+				height: 4px
+				border-radius: 0
+				background: $white
+				opacity: 1
+				&-active
+					background: $blue-00
+				+ .swiper-pagination-bullet
+					margin-left: 4px
+			@media screen and ( max-width: 991.98px )
+				bottom: auto
+				top: 60%
+			@media screen and ( max-width: 575.98px )
+				bottom: auto
+				top: 40%
 	@media screen and ( max-width: 767.98px )
 		padding: r(30px) 0
