@@ -18,7 +18,7 @@
                     <div class="swiper-button-prev"></div>
                 </div>
                 <div class="wrap-infor-product">
-                    <div class="section-title" data-aos="fade-right">
+                    <div class="section-title" data-aos="fade-up">
                         <xsl:value-of select="ZoneTitle"/>
                     </div>
                     <div class="container--tabs">
@@ -58,8 +58,8 @@
                 <xsl:attribute name="data-color">
                     <xsl:value-of select="$v1"/>
                 </xsl:attribute>
-                <div class="swiper-container" data-aos="fade-left">
-                    <div class="swiper-wrapper" >
+                <div class="swiper-container" data-aos="fade-up">
+                    <div class="swiper-wrapper">
                         <xsl:apply-templates select="$vProductImages">
                             <xsl:with-param name="colorId">
                                 <xsl:value-of select="$v1"/>
@@ -92,7 +92,7 @@
         </li>
     </xsl:template>
     <xsl:template match="Product" mode="Content">
-        <div class="tab-panel" id="tab-2" >
+        <div class="tab-panel" id="tab-2">
             <xsl:if test="position() = 1">
                 <xsl:attribute name="class">
                     <xsl:text>tab-panel active</xsl:text>
@@ -183,15 +183,11 @@
                             <label for="">Giá xe
                                 <span>(đã bao gồm thuế VAT)</span>
                             </label>
-                            <div class="input ajax-old-price">
-                
-              </div>
+                            <div class="input ajax-old-price"></div>
                         </div>
                         <div class="price">
                             <label for="">Số tiền đặt cọc</label>
-                            <div class="input ajax-price">
-                
-              </div>
+                            <div class="input ajax-price"></div>
                         </div>
                     </div>
                 </div>
@@ -204,8 +200,7 @@
             <div class="form-row" data-aos="fade-up">
                 <div class="form-group">
                     <label for="">Họ và tên (*)</label>
-                    <input type="text" placeholder="Họ và tên của bạn" class="" 
-              data-rule-required="true" data-msg-required="Vui lòng nhập họ và tên" >
+                    <input type="text" placeholder="Họ và tên của bạn" class="" data-rule-required="true" data-msg-required="Vui lòng nhập họ và tên" >
                         <xsl:attribute name="name">
                             <xsl:text>Order_</xsl:text>
                             <xsl:value-of select="ProductId"/>
@@ -217,10 +212,7 @@
             <div class="form-row" data-aos="fade-up">
                 <div class="form-group">
                     <label for="">Email (*)</label>
-                    <input type="text" placeholder="Địa chỉ email"  class="" 
-              data-rule-required="true" data-rule-email="true"
-              data-msg-required="Vui lòng nhập email"
-              data-msg-email="Email không hợp lệ">
+                    <input type="text" placeholder="Địa chỉ email"  class="" data-rule-required="true" data-rule-email="true" data-msg-required="Vui lòng nhập email" data-msg-email="Email không hợp lệ">
                         <xsl:attribute name="name">
                             <xsl:text>Order_</xsl:text>
                             <xsl:value-of select="ProductId"/>
@@ -230,10 +222,15 @@
                 </div>
                 <div class="form-group">
                     <label for="">Số điện thoại</label>
-                    <input type="text" placeholder="Nhập số điện thoại"  class="" data-rule-required="true"
-              data-msg-required="Vui lòng nhập số điện thoại" 
-              data-rule-phone="true" data-msg-phone="Số điện thoại không hợp lệ" >
+                    <input type="text" placeholder="Nhập số điện thoại"  class="phone-number" data-rule-required="true"
+              data-msg-required="Vui lòng nhập số điện thoại"  
+              data-rule-regex="true" data-msg-regex="Số điện thoại không hợp lệ" >
                         <xsl:attribute name="name">
+                            <xsl:text>Order_</xsl:text>
+                            <xsl:value-of select="ProductId"/>
+                            <xsl:text>_PhoneNumber</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="id">
                             <xsl:text>Order_</xsl:text>
                             <xsl:value-of select="ProductId"/>
                             <xsl:text>_PhoneNumber</xsl:text>
@@ -255,7 +252,7 @@
                             <xsl:text>_Agree</xsl:text>
                         </xsl:attribute>
                     </input>
-                    <label for="checkbox-2" data-aos="fade-up">
+                    <label for="checkbox-2">
                         <xsl:attribute name="for">
                             <xsl:text>Order_</xsl:text>
                             <xsl:value-of select="ProductId"/>
@@ -331,7 +328,7 @@
     </xsl:template>
     <xsl:template match="CustomField" mode="Variant">
         <xsl:param name="productId" />
-        <div class="form-group" data-aos="fade-up">
+        <div class="form-group">
             <label>
                 <xsl:value-of select="Title"/>
             </label>
@@ -384,7 +381,7 @@
         </div>
     </xsl:template>
     <xsl:template match="Option" mode="Color">
-        <li  class="color-link" data-aos="fade-up">
+        <li  class="color-link">
             <xsl:if test="position() = 1">
                 <xsl:attribute name="class">
                     <xsl:text>color-link active</xsl:text>

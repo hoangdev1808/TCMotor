@@ -69,7 +69,7 @@
                     <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="section-title color-white text-center">
+                    <div class="section-title color-white text-center" data-aos="fade-up">
                         <xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
                     </div>
                     <xsl:apply-templates select="News" mode="Sec4"></xsl:apply-templates>
@@ -379,16 +379,16 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="Sec-2">
-        <div class="section-title" data-aos="fade-right">
+        <div class="section-title" data-aos="fade-up">
             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
         </div>
-        <div class="content" data-aos="fade-right">
+        <div class="content" data-aos="fade-up">
             <p>
                 <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
             </p>
         </div>
-        <div class="button" data-aos="fade-right">
+        <div class="button" data-aos="fade-up">
             <a class="btn btn-booking" href="">
                 <xsl:attribute name="href">
                     <xsl:text disable-output-escaping="yes">#sec-5</xsl:text>
@@ -402,16 +402,16 @@
         <xsl:if test="position() = 1">
             <div class="col-lg-4 col-md-12">
                 <div class="item">
-                    <div class="section-title" data-aos="fade-down">
+                    <div class="section-title" data-aos="fade-up">
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                         <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </div>
-                    <div class="content" data-aos="fade-down">
+                    <div class="content" data-aos="fade-up">
                         <p>
                             <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
                         </p>
                     </div>
-                    <div class="button" data-aos="fade-down">
+                    <div class="button" data-aos="fade-up">
                         <a class="btn btn-booking" href="">
                             <xsl:attribute name="href">
                                 <xsl:text disable-output-escaping="yes">#sec-5</xsl:text>
@@ -454,7 +454,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="item">
                     <div class="content">
-                        <div class="icon" data-aos="fade-down">
+                        <div class="icon" data-aos="fade-up">
                             <img>
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="ImageUrl" disable-output-escaping="yes"></xsl:value-of>
@@ -465,11 +465,11 @@
                             </img>
                         </div>
                         <div class="desc">
-                            <div class="title" data-aos="fade-down">
+                            <div class="title" data-aos="fade-up">
                                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                                 <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </div>
-                            <p data-aos="fade-down">
+                            <p data-aos="fade-up">
                                 <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
                             </p>
                         </div>
@@ -515,7 +515,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="Sec6">
-        <div class="section-title text-center color-white">
+        <div class="section-title text-center color-white" data-aos="fade-up">
             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
         </div>

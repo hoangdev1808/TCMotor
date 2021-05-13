@@ -23,16 +23,16 @@
                     <xsl:value-of select="position() + 5" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="section-title text-center color-black" data-aos="fade-left">
+                    <div class="section-title text-center color-black" data-aos="fade-up">
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                     </div>
                     <div class="tabs_wrapper">
-                        <div class="tabs tabs-parent" id="new_tabs">
-                            <ul data-aos="fade-left">
+                        <div class="tabs tabs-parent" id="new_tabs" data-aos="fade-up">
+                            <ul >
                                 <xsl:apply-templates select="Zone" mode="LIST_1"></xsl:apply-templates>
                             </ul>
                         </div>
-                        <div class="tabs_content" id="new_tabs_content" style="padding:0" data-aos="fade-left">
+                        <div class="tabs_content" id="new_tabs_content" style="padding:0">
                             <xsl:apply-templates select="Zone" mode="CONTENT_1"></xsl:apply-templates>
                         </div>
                     </div>
@@ -46,10 +46,10 @@
                     <xsl:value-of select="position() + 5" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="section-title text-center color-white" data-aos="fade-left">
+                    <div class="section-title text-center color-white" data-aos="fade-up">
                         <xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
                     </div>
-                    <div class="special-slide">
+                    <div class="special-slide" data-aos="fade-up">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <xsl:apply-templates select="News" mode="Sec8"></xsl:apply-templates>
@@ -193,7 +193,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="Sec6">
-        <div class="section-title text-center color-white">
+        <div class="section-title text-center color-white" data-aos="fade-up">
             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
         </div>
@@ -285,10 +285,10 @@
                 <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
             </xsl:attribute>
             <div class="tabs_wrapper">
-                <div class="tabs_content" id="new2_tabs_content">
+                <div class="tabs_content" id="new2_tabs_content" data-aos="fade-up">
                     <xsl:apply-templates select="Zone" mode="CONTENT_2"></xsl:apply-templates>
                 </div>
-                <div class="tabs tabs-child" id="new2_tabs">
+                <div class="tabs tabs-child" id="new2_tabs" data-aos="fade-up">
                     <ul>
                         <div class="label">Màu xe:</div>
                         <xsl:apply-templates select="Zone" mode="LIST_2"></xsl:apply-templates>

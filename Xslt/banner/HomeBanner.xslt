@@ -43,7 +43,7 @@
                     <xsl:if test="Description != ''">
                         <xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
                     </xsl:if>
-                    <div class="button" data-aos="fade-up">
+                    <div class="button" data-aos="fade-up" data-aos-delay="200">
                         <a class="btn btn-booking">
                             <xsl:attribute name="href">
                                 <xsl:text disable-output-escaping="yes">#sec-5</xsl:text>
