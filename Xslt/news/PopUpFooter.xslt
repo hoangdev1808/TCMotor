@@ -5,18 +5,16 @@
         <xsl:apply-templates select="Zone/Zone"></xsl:apply-templates>
     </xsl:template>
     <xsl:template match="Zone">
-        <xsl:if test="position() = 1">
-            <div class="rules-popup">
-                <xsl:attribute name="id">
-                    <xsl:text disable-output-escaping="yes">rules-popup-</xsl:text>
-                    <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
-                </xsl:attribute>
-                <div class="wrapper-content">
-                    <xsl:apply-templates select="News"></xsl:apply-templates>
-                </div>
+        <div class="rules-popup">
+            <xsl:attribute name="id">
+                <xsl:text disable-output-escaping="yes">rules-popup-</xsl:text>
+                <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
+            </xsl:attribute>
+            <div class="wrapper-content">
+                <xsl:apply-templates select="News"></xsl:apply-templates>
             </div>
-        </xsl:if>
-        <xsl:if test="position() = 2">
+        </div>
+        <!-- <xsl:if test="position() = 2">
             <div class="rules-popup">
                 <xsl:attribute name="id">
                     <xsl:text disable-output-escaping="yes">rules-popup-</xsl:text>
@@ -59,7 +57,7 @@
                     <xsl:apply-templates select="News"></xsl:apply-templates>
                 </div>
             </div>
-        </xsl:if>
+        </xsl:if> -->
     </xsl:template>
     <xsl:template match="News">
         <div class="popup-title">
